@@ -4,30 +4,37 @@
 
     <server>
         <player-name>Knight of Hanoi</player-name>
-        <name>YGOPRO 한국서버</name>
-        <ip>cygopro.fun25.co.kr</ip>
-        <port>17225</port>
+        <name>Gideon TCG</name>
+        <ip>71.236.164.26</ip>
+        <port>7911</port>
         <keep>true</keep>
     </server>
     <server>
         <player-name>Knight of Hanoi</player-name>
-        <name>Koishi 중국서버</name>
-        <ip>koishi.ygopro.cn</ip>
-        <port>7210</port>
-        <keep>true</keep>
-    </server>
-    <server>
-        <player-name>Knight of Hanoi</player-name>
-        <name>YGOPRO 중국서버</name>
+        <name>Mercury</name>
         <ip>s1.ygo233.com</ip>
         <port>233</port>
         <keep>true</keep>
     </server>
     <server>
-        <player-name>fresh_meat</player-name>
-        <name>YGOPRO WindBot Online</name>
+        <player-name>Knight of Hanoi</player-name>
+        <name>WindBot</name>
         <ip>s1.ygo233.com</ip>
         <port>9999</port>
+        <keep>true</keep>
+    </server>
+	<server>
+        <player-name>Knight of Hanoi</player-name>
+        <name>Gideon Custom</name>
+        <ip>71.236.164.26</ip>
+        <port>8234</port>
+        <keep>true</keep>
+    </server>
+	<server>
+        <player-name>Knight of Hanoi</player-name>
+        <name>YGOProES</name>
+        <ip>ygoproes.ddns.net</ip>
+        <port>8005</port>
         <keep>true</keep>
     </server>
 </servers>
