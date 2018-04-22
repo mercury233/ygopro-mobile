@@ -323,7 +323,7 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 			return false;
 		}
 		case MSG_HINT: {
-			pbuf += 6;
+			pbuf += 10;
 			DuelClient::ClientAnalyze(offset, pbuf - offset);
 			break;
 		}
@@ -340,7 +340,7 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 		case MSG_SELECT_BATTLECMD: {
 			player = BufferIO::ReadInt8(pbuf);
 			count = BufferIO::ReadInt8(pbuf);
-			pbuf += count * 11;
+			pbuf += count * 15;
 			count = BufferIO::ReadInt8(pbuf);
 			pbuf += count * 8 + 2;
 			ReplayRefresh();
@@ -359,18 +359,18 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 			count = BufferIO::ReadInt8(pbuf);
 			pbuf += count * 7;
 			count = BufferIO::ReadInt8(pbuf);
-			pbuf += count * 11 + 3;
+			pbuf += count * 15 + 3;
 			ReplayRefresh();
 			return ReadReplayResponse();
 		}
 		case MSG_SELECT_EFFECTYN: {
 			player = BufferIO::ReadInt8(pbuf);
-			pbuf += 12;
+			pbuf += 16;
 			return ReadReplayResponse();
 		}
 		case MSG_SELECT_YESNO: {
 			player = BufferIO::ReadInt8(pbuf);
-			pbuf += 4;
+			pbuf += 8;
 			return ReadReplayResponse();
 		}
 		case MSG_SELECT_OPTION: {
@@ -399,7 +399,7 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 		case MSG_SELECT_CHAIN: {
 			player = BufferIO::ReadInt8(pbuf);
 			count = BufferIO::ReadInt8(pbuf);
-			pbuf += 10 + count * 13;
+			pbuf += 10 + count * 17;
 			return ReadReplayResponse();
 		}
 		case MSG_SELECT_PLACE:
@@ -596,7 +596,7 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 			break;
 		}
 		case MSG_CHAINING: {
-			pbuf += 16;
+			pbuf += 20;
 			DuelClient::ClientAnalyze(offset, pbuf - offset);
 			break;
 		}
@@ -786,16 +786,16 @@ bool ReplayMode::ReplayAnalyze(char* msg, unsigned int len) {
 		case MSG_ANNOUNCE_CARD_FILTER: {
 			player = BufferIO::ReadInt8(pbuf);
 			count = BufferIO::ReadInt8(pbuf);
-			pbuf += 4 * count;
+			pbuf += 8 * count;
 			return ReadReplayResponse();
 		}
 		case MSG_CARD_HINT: {
-			pbuf += 9;
+			pbuf += 13;
 			DuelClient::ClientAnalyze(offset, pbuf - offset);
 			break;
 		}
 		case MSG_PLAYER_HINT: {
-			pbuf += 6;
+			pbuf += 10;
 			DuelClient::ClientAnalyze(offset, pbuf - offset);
 			break;
 		}
