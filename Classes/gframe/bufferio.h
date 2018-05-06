@@ -7,7 +7,7 @@
 
 class BufferIO {
 public:
-    inline static unsigned long long ReadInt64(char*& p) {
+	inline static unsigned long long ReadInt64(char*& p) {
 		unsigned long long ret = *(unsigned long long*)p;
 		p += 8;
 		return ret;
